@@ -4,6 +4,7 @@ import chair from './images/chair.jpg'
 import couch from './images/couch.jpg'
 import livingRoom from './images/living-room.jpg'
 import InteractiveChar from './InteractiveChar'
+import FurnitureImage from './FurnitureImage'
 
     //select letter div elements
 
@@ -45,12 +46,12 @@ function App() {
     <>
     <p class="header">Deals up to 75% off!</p>
 
-<ul class="sections">
+<div class="sections">
     
-    <li>Home</li>
-    <li>Contact</li>
+    <button>Home</button>
+    <button>Contact</button>
     <div class="dropdown" data-dropdown>
-        <li class="link" data-dropdown-button>Products</li>
+        <button class="link" data-dropdown-button>Products</button>
         <div class="dropdown-menu information-grid">
             <div>
                 <div class="dropdown-heading">Seating</div>
@@ -85,8 +86,8 @@ function App() {
             </div>
         </div>
     </div>
-    <li>Locations</li>
-</ul>
+    <button>Locations</button>
+</div>
 
 <div class="fimage-container">
     <div class="letter-container">
@@ -105,26 +106,24 @@ function App() {
         <InteractiveChar character='R' placement={12}/>
         <InteractiveChar character='E' placement={13}/>
     </div>
-    <p class="button">browse</p>
+    <div class="button">browse</div>
     <img class="fpage-image" src={livingRoom} alt="living room"/>
 </div>
 
 <div class="grid-container">
-    <div class="grid-item item-one">
-        <div class="image-cover">assdasdsadassad</div>
-        <img src={couch} alt="couch"/>
-    </div>
-    <div class="grid-item item-two">
-        <div class="image-cover">adfasdfasd</div>
-        <img src={bed} alt="bed"/>
-    </div>
-    <div class="grid-item item-three">
-        <div class="image-cover">assdasdsadassad</div>
-        <img src={chair} alt="chair"/>
-    </div>
+    <FurnitureImage image={couch} text='couches'/>
+    <FurnitureImage image={bed} text='beds'/>
+    <FurnitureImage image={chair} text='chairs'/>
 </div>
     </>
   )
 }
+
+/*
+    <div class="grid-item item-three">
+        <div class="image-cover">assdasdsadassad</div>
+        <img src={chair} alt="chair"/>
+    </div>
+*/
 
 export default App;

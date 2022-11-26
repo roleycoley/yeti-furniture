@@ -17,13 +17,16 @@ export default function InteractiveLetter({character, placement})
     useEffect(() => {
         const timer = setTimeout(() => {
             setState(false);
-        }, placement * 200);
+        }, placement * 100);
         return () => clearTimeout(timer);
     }, [])
     
 
     return (
         <div 
-        className={state ? 'active' : null} onMouseLeave={deactivate} onMouseEnter={toggleActive}>{character}</div>
+        className={state ? 'active' : null} 
+        onMouseLeave={deactivate} 
+        onMouseEnter={toggleActive}>{character}
+        </div>
     )
 }

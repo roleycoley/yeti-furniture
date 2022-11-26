@@ -24,10 +24,6 @@ body {
     z-index:-1000;
 }
 
-ul {
-    list-style-type: none;
-}
-
 .sections {
     display:flex;
     justify-content:center;
@@ -35,23 +31,26 @@ ul {
     gap:100px; 
 }
 
-.sections li {
+.sections button {
     letter-spacing: 1px;
+    border:0;
     font-size: 18px;
     box-sizing: border-box;
     margin-bottom:1px;
+    background:white;
+    margin:16px;
+    
 }
 
-.sections li:hover {
+.sections button:hover {
     cursor: pointer;
-    border-bottom: black 1px solid;
-    margin-bottom:0px;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
 }
 
 .button {
     position: absolute;
     padding: 10px;
-    color:black;
     inset:0;
     margin:330px auto;
     width:120px;
@@ -96,11 +95,11 @@ ul {
 
 .grid-container {
     display:grid;
-    margin:50px 0px;
+    margin:60px 0px;
     grid-template-columns: repeat(3, 500px);
     grid-template-rows: repeat(1, 400px);
     justify-content:center;
-    grid-gap:30px;
+    grid-gap:40px;
 }
 
 .dropdown {
@@ -116,7 +115,7 @@ ul {
     border-radius: .25rem;
     box-shadow: 0 2px 5px 0 rgb(0,0,0, 0.1);
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
     pointer-events:none;
     z-index:1;
@@ -164,40 +163,22 @@ a:hover {
 }
 
 .grid-item img {
-    height:100%;
     transition:0.3s;
-    pointer-events:none;
     position:relative;
     z-index: -1;
-}
-
-.grid-item.item-one img{
-    transform:translateX(-5%);
     
 }
 
-.grid-item.item-two img{
-    transform:translateX(-6%);
-}
-
-.grid-item.active img {
-    height:105%;
+.grid-item img.active {
+    scale:1.2;
     cursor:pointer;
     filter:blur(2px);
 }
 
-.image-cover {
+div > .image-cover {
     position:absolute;
-    opacity:0;
     display:flex;
     z-index: 10;
     height:100%;
     width:100%;
-}
-
-.grid-item.active .image-cover {
-    opacity: 1;
-    color:white;
-    justify-content:center;
-    align-items:center;
 }
