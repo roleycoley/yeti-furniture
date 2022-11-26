@@ -3,11 +3,8 @@ import bed from './images/bed.jpg'
 import chair from './images/chair.jpg'
 import couch from './images/couch.jpg'
 import livingRoom from './images/living-room.jpg'
-import InteractiveChar from './InteractiveChar'
-import FurnitureImage from './FurnitureImage'
-
-    //select letter div elements
-
+import InteractiveChar from './components/InteractiveChar'
+import FurnitureImage from './components/FurnitureImage'
 
     //https://www.freepik.com/free-photos-vectors/interior-background
         
@@ -35,11 +32,6 @@ import FurnitureImage from './FurnitureImage'
             dropDown.classList.remove("active");
         });
     })
-
-    let panels = document.querySelectorAll('.grid-item');
-
-    panels.forEach(panel => panel.addEventListener('mouseover', () => panel.classList.toggle('active')));
-    panels.forEach(panel => panel.addEventListener('mouseout', () => panel.classList.remove('active')));
 
 function App() {
   return (
@@ -118,12 +110,5 @@ function App() {
     </>
   )
 }
-
-/*
-    <div class="grid-item item-three">
-        <div class="image-cover">assdasdsadassad</div>
-        <img src={chair} alt="chair"/>
-    </div>
-*/
 
 export default App;

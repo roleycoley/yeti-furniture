@@ -17,10 +17,10 @@ export default function FurnitureImage({image, text})
 
     return (
         <div class="grid-item"             
-        className={state ? 'active' : null} 
+        className={state ? 'grid-item active' : 'grid-item'} 
         onMouseLeave={deactivate} 
         onMouseEnter={toggleActive}>
-            <div className="image-cover" style={state ? {opacity: 1} : {opacity : 0}}>{text}</div>
+            <div className={state ? 'active image-cover' : 'image-cover'} >{text}</div>
             <img src={image} alt="couch" className={state ? 'active' : null}/>
         </div>
     )
