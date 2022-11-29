@@ -7,29 +7,25 @@ import Store from './pages/Store'
     //https://www.freepik.com/free-photos-vectors/interior-background
         
 
-    // dropdown menu
-    document.addEventListener("click", e => {
-        const isDropdownButton = e.target.matches("[data-dropdown-button]");
+// dropdown menu
+document.addEventListener("click", e => {
+    const isDropdownButton = e.target.matches("[data-dropdown-button]");
 
-        if(!isDropdownButton && e.target.closest('[data-dropdown]') != null) return;
+    if(!isDropdownButton && e.target.closest('[data-dropdown]') != null) return;
 
-        let currentDropdown;
+    let currentDropdown;
 
-        if(isDropdownButton)
-        {
-            currentDropdown = e.target.closest('[data-dropdown]');
-            currentDropdown.classList.toggle('active');
-        }
+    if(isDropdownButton)
+    {
+        currentDropdown = e.target.closest('[data-dropdown]');
+        currentDropdown.classList.toggle('active');
+    }
 
-        const isDropdownButtonMenu = e.target.matches("[data-dropdown-menu]");
-
-        if(!isDropdownButton && e.target.closest('[data-dropdown]') != null) return;
-
-        document.querySelectorAll("[data-dropdown].active").forEach(dropDown => {
-            if (dropDown === currentDropdown) return;
-            dropDown.classList.remove("active");
-        });
-    })
+    document.querySelectorAll("[data-dropdown].active").forEach(dropDown => {
+        if (dropDown === currentDropdown) return;
+        dropDown.classList.remove("active");
+    });
+})
 
 function App() {
   return (

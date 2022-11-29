@@ -20,7 +20,7 @@ export default function Home(){
                     <InteractiveChar character='T' placement={3}/>
                     <InteractiveChar character='I' placement={4}/>
                     <div style={{margin: '0px 2px'}}></div>
-                    <InteractiveChar character='F' placement={5}/>
+                    <InteractiveChar character='F' placement={5} />
                     <InteractiveChar character='U' placement={6}/>
                     <InteractiveChar character='R' placement={7}/>
                     <InteractiveChar character='N' placement={8}/>

@@ -15,12 +15,16 @@ export default function FurnitureImage({image, text})
     }
 
     return (
+        
             <div class="grid-item"             
             className={state ? 'grid-item active' : 'grid-item'} 
             onMouseLeave={deactivate} 
             onMouseEnter={toggleActive}>
                 <div className={state ? 'active image-cover' : 'image-cover'} >{text}</div>
-                <img src={image} alt="couch" className={state ? 'active' : null}/> 
+                <Link to ="/store">
+                    <img src={image} alt="couch" className={state ? 'active' : null}/> 
+                </Link>
             </div>  
+            
     )
 }
