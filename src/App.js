@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home  from './pages/Home'
 import Contact  from './pages/Contact'
 import Store from './pages/Store'
+import Navbar from './components/Navbar'
 
     //https://www.freepik.com/free-photos-vectors/interior-background
         
@@ -30,6 +31,7 @@ document.addEventListener("click", e => {
 function App() {
   return (
     <>  
+        <Navbar />
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/contact' element={<Contact />} />

@@ -2,6 +2,7 @@ body {
     margin: 0;
     background:#f3f3f3;
     overflow-y: scroll;
+    font-family: Arial;
 }
 
 .header {
@@ -15,7 +16,6 @@ body {
 .fimage-container {
     text-align:center;
     color:white;
-    font-family: Arial;
     position:relative;
 }
 
@@ -30,7 +30,6 @@ body {
 .sections {
     display:flex;
     justify-content:center;
-    font-family: Arial;
     gap:100px; 
     background:white;
     box-shadow: 0 2px 5px 0 rgb(0,0,0, 0.1);
@@ -163,8 +162,6 @@ a:hover {
     grid-gap:40px;
 }
 
-
-
 div.grid-item {
     position:relative;
     overflow: hidden;
@@ -181,7 +178,6 @@ div.grid-item > div.image-cover {
     letter-spacing: 10px;
     text-transform: uppercase;
     font-size:35px;
-    font-family: Arial;
     justify-content:center;
     align-items:center;
     cursor:pointer;
@@ -201,4 +197,58 @@ div.grid-item img {
 div.grid-item img.active {
     filter:blur(2px);
     scale:1.1;
+}
+
+div.furniture-item-container {
+    display:flex;
+    flex-wrap:wrap;
+    margin:0px 110px;
+    justify-content:space-between;
+}
+
+div.furniture-item {
+    display:flex;
+    flex-direction: column;
+    width: 380px;
+    border: lightgray 1px solid;
+    border-radius:5px;
+    margin:20px;
+    box-shadow: 0 2px 5px 0 rgb(0,0,0, 0.1);
+}
+
+div.item-info {
+    height:30%;
+    display:flex;
+    flex-direction:column;
+    background:white;
+    padding:10px;
+    justify-content:center;
+}
+
+div.label {
+    font-size:25px;
+    letter-spacing: 1px;
+}
+
+.yeti-style {
+    background:white;
+    margin: auto;
+    margin-bottom:0px;
+    border-radius:5px;
+    border: lightgray 1px solid;
+}
+
+.yeti-style:hover {
+    color:lightgray;
+    background:white;
+    cursor:pointer;
+}
+
+.items-in-cart-buttons {
+    display:flex;
+    width:175px;
+    flex-wrap:wrap;
+    font-size:20px;
+    gap:5px;
+    justify-content:center;
 }

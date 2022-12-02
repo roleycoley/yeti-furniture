@@ -1,18 +1,11 @@
-import bed from '../images/bed.jpg'
-import chair from '../images/chair.jpg'
-import couch from '../images/couch.jpg'
-import livingRoom from '../images/living-room.jpg'
+
 import InteractiveChar from '../components/InteractiveChar'
 import FurnitureImage from '../components/FurnitureImage'
-import Navbar from '../components/Navbar'
-
 import { Link } from "react-router-dom"
 
 export default function Home(){
     return (
         <>
-            <Navbar />
-
             <div class="fimage-container">
                 <div class="letter-container">
                     <InteractiveChar character='Y' placement={1}/>
@@ -34,13 +27,13 @@ export default function Home(){
                 <Link to="/store">
                     <div class="button">browse</div>
                 </Link>
-                <img class="fpage-image" src={livingRoom} alt="living room"/>
+                <img class="fpage-image" src="images/living-room.jpg" alt="living room"/>
             </div>
 
             <div class="grid-container">
-                <FurnitureImage image={couch} text='couches'/>
-                <FurnitureImage image={bed} text='beds'/>
-                <FurnitureImage image={chair} text='chairs'/>
+                <FurnitureImage image="images/couch.jpg" text='couches'/>
+                <FurnitureImage image="images/bed.jpg" text='beds'/>
+                <FurnitureImage image="images/chair.jpg" text='chairs'/>
             </div>
         </>
     )

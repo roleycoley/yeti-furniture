@@ -4,7 +4,7 @@ export default function Navbar() {
 
     return (
         <>
-            <p class="header">Deals up to 75% off!</p>
+            <p class="header">Deals up to 50% off!</p>
             <div class="sections">
                 <Link to="/"><button>Home</button></Link>
                 <Link to ="/contact"><button>Contact</button></Link>
