@@ -30,6 +30,7 @@ body {
 .sections {
     display:flex;
     justify-content:center;
+    align-items:center;
     gap:100px; 
     background:white;
     box-shadow: 0 2px 5px 0 rgb(0,0,0, 0.1);
@@ -252,4 +253,40 @@ div.label {
     gap:5px;
     justify-content:center;
     align-items:center;
+}
+
+.cart-icon {
+    position:absolute;
+    right:20px;
+    width:40px;
+    height:40px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:lightgray solid 2px;
+    border-radius:50px;
+    transition:0.2s;
+}
+
+.cart-icon:hover {
+    background:white;
+    border:#f3f3f3 solid 2px;
+    cursor:pointer;
+}
+
+.cart-items-amount
+{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:15px;
+    height:15px;
+    right:-5px;
+    bottom:-5px;
+    font-size:12px;
+    padding:2px;
+    position:absolute;
+    background:red;
+    border-radius:15px;
+    color:white;
 }

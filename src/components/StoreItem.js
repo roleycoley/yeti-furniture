@@ -1,7 +1,5 @@
 import { useShoppingCart } from "../context/ShoppingCartContext"
 
-
-
 export default function CartItem({id, imgUrl, name, price})
 {
     const {
@@ -44,7 +42,7 @@ export default function CartItem({id, imgUrl, name, price})
                                 -
                             </button>
 
-                            <div>{quantity} in cart</div>
+                            <div>{quantity} <span style={{color:'gray'}}>in cart</span></div>
 
                             <button className='yeti-style' 
                             style={{width:'30px', height:'30px'}}

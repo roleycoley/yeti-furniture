@@ -6,6 +6,7 @@ import Store from './pages/Store'
 import Navbar from './components/Navbar'
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 
+
 //https://www.freepik.com/free-photos-vectors/interior-background
         
 // dropdown menu
