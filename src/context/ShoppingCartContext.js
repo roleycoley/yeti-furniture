@@ -6,7 +6,7 @@ export function useShoppingCart() {
     return useContext(ShoppingCartContext)
 }
 
-export default function ShoppingCartProvider({children})
+export function ShoppingCartProvider({children})
 {
     const [cartItems, setCartItems] = useState([])
 
@@ -61,8 +61,8 @@ export default function ShoppingCartProvider({children})
           removeFromCart,
           cartItems,
         }}
-      >
-        {children}
-      </ShoppingCartContext.Provider>
+        >
+            {children}
+        </ShoppingCartContext.Provider>
     )
 }

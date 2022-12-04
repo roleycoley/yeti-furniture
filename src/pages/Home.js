@@ -31,9 +31,9 @@ export default function Home(){
             </div>
 
             <div class="grid-container">
-                <FurnitureImage image="images/couch.jpg" text='couches'/>
-                <FurnitureImage image="images/bed.jpg" text='beds'/>
-                <FurnitureImage image="images/chair.jpg" text='chairs'/>
+                <FurnitureImage imgUrl="images/couch.jpg" text='couches'/>
+                <FurnitureImage imgUrl="images/bed.jpg" text='beds'/>
+                <FurnitureImage imgUrl="images/chair.jpg" text='chairs'/>
             </div>
         </>
     )

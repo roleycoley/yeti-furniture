@@ -4,11 +4,10 @@ import Home  from './pages/Home'
 import Contact  from './pages/Contact'
 import Store from './pages/Store'
 import Navbar from './components/Navbar'
-import ShoppingCartProvider from "./context/ShoppingCartContext"
+import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 
-    //https://www.freepik.com/free-photos-vectors/interior-background
+//https://www.freepik.com/free-photos-vectors/interior-background
         
-
 // dropdown menu
 document.addEventListener("click", e => {
     const isDropdownButton = e.target.matches("[data-dropdown-button]");
