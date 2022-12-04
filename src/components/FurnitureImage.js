@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom"
 
-export default function FurnitureImage({image, text})
+export default function FurnitureImage({imgUrl, text})
 {
 
     const [state, setState] = useState(false)
@@ -22,7 +22,7 @@ export default function FurnitureImage({image, text})
             onMouseEnter={toggleActive}>
                 <div className={state ? 'active image-cover' : 'image-cover'} >{text}</div>
                 <Link to ="/store">
-                    <img src={image} alt="couch" className={state ? 'active' : null}/> 
+                    <img src={imgUrl} alt="couch" className={state ? 'active' : null}/> 
                 </Link>
             </div>  
             
