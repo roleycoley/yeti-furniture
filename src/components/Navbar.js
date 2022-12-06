@@ -4,7 +4,7 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 
 export default function Navbar() {
 
-    const { cartQuantity } = useShoppingCart()
+    const { openCart, cartQuantity } = useShoppingCart()
     console.log(cartQuantity)
 
     return (
@@ -50,7 +50,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <button>Locations</button>
-                <div className='cart-icon'>
+                <div className='cart-icon' onClick={openCart}>
                     <ShoppingCartIcon/>
                     {cartQuantity > 0 && (
                         <div className='cart-items-amount'>

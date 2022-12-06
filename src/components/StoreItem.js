@@ -1,4 +1,5 @@
 import { useShoppingCart } from "../context/ShoppingCartContext"
+import { formatCurrency } from "../utilities/formatCurrency"
 
 export default function CartItem({id, imgUrl, name, price})
 {
@@ -18,7 +19,7 @@ export default function CartItem({id, imgUrl, name, price})
             <div className='item-info'>
                 <div style={{display:'flex', justifyContent:'space-between'}}>
                     <div className='label'>{name}</div>
-                    <div className='label' style={{color:'gray', fontSize:'20px'}}>{price}</div>
+                    <div className='label' style={{color:'gray', fontSize:'20px'}}>{formatCurrency(price)}</div>
                 </div>
                 {quantity === 0 ? 
                 (

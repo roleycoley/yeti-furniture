@@ -5,7 +5,6 @@ import Contact  from './pages/Contact'
 import Store from './pages/Store'
 import Navbar from './components/Navbar'
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
-import ShoppingCart from "./components/ShoppingCart"
 
 
 //https://www.freepik.com/free-photos-vectors/interior-background
@@ -31,7 +30,9 @@ document.addEventListener("click", e => {
 })
 
 function App() {
+
   return (
+
     <ShoppingCartProvider>
         <Navbar />
         <Routes>
@@ -39,7 +40,6 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/store' element={<Store />} />
         </Routes>
-        <ShoppingCart />
     </ShoppingCartProvider>  
   )
 }
