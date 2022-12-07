@@ -23,6 +23,7 @@ document.addEventListener("click", e => {
         currentDropdown.classList.toggle('active');
     }
 
+    //closes other menus
     document.querySelectorAll("[data-dropdown].active").forEach(dropDown => {
         if (dropDown === currentDropdown) return;
         dropDown.classList.remove("active");

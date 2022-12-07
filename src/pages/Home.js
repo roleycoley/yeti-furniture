@@ -1,4 +1,3 @@
-
 import InteractiveChar from '../components/InteractiveChar'
 import FurnitureImage from '../components/FurnitureImage'
 import { Link } from "react-router-dom"
@@ -11,14 +10,11 @@ export default function Home(){
             <div class="fimage-container">
                 <img class="fpage-image" src="images/living-room.jpg" alt="living room"/>
                 <div class="letter-container">
-                    <div style={{display:'flex'}}>
-
-                        <InteractiveChar character='Y' placement={1}/>
-                        <InteractiveChar character='E' placement={2}/>
-                        <InteractiveChar character='T' placement={3}/>
-                        <InteractiveChar character='I' placement={4}/>
-                    </div>
-                    <div style={{display:'flex'}}>
+                    <InteractiveChar character='Y' placement={1}/>
+                    <InteractiveChar character='E' placement={2}/>
+                    <InteractiveChar character='T' placement={3}/>
+                    <InteractiveChar character='I' placement={4}/>
+                    <div style={{margin:'0 2px'}}></div>
                     <InteractiveChar character='F' placement={5} />
                     <InteractiveChar character='U' placement={6}/>
                     <InteractiveChar character='R' placement={7}/>
@@ -28,7 +24,6 @@ export default function Home(){
                     <InteractiveChar character='U' placement={11}/>
                     <InteractiveChar character='R' placement={12}/>
                     <InteractiveChar character='E' placement={13}/>
-                    </div>
                 </div>
                 <Link to="/store">
                     <div class="button">browse</div>

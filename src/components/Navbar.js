@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { useShoppingCart } from "../context/ShoppingCartContext"
 import { useRef } from 'react'
+import { CenterFocusStrong } from "@material-ui/icons";
 
 export default function Navbar() {
 
