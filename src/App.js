@@ -32,18 +32,14 @@ document.addEventListener("click", e => {
 function App() {
 
   return (
-<HashRouter>   
-
     <ShoppingCartProvider>
         <Navbar />
-        
         <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/store' element={<Store />} />
         </Routes>
     </ShoppingCartProvider>  
-</HashRouter>
   )
 }
 
