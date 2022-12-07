@@ -201,20 +201,21 @@ div.grid-item img.active {
 }
 
 div.furniture-item-container {
-    display:flex;
-    flex-wrap:wrap;
-    margin:0px 110px;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    grid-gap:50px;
+    padding:50px 100px;
+    justify-content:center;
 }
 
 div.furniture-item {
     display:flex;
     flex-direction: column;
-    width: 380px;
     border: lightgray 1px solid;
     border-radius:5px;
-    margin:20px;
     box-shadow: 0 2px 5px 0 rgb(0,0,0, 0.1);
+    flex-basis:0;
+    flex-grow:1;
 }
 
 div.item-info {
@@ -239,7 +240,7 @@ div.label {
     border: lightgray 1px solid;
 }
 
-.yeti-style:hover {
+.yeti-style:hover, .close-cart-button:hover, .checkout-buttons:hover {
     color:lightgray;
     background:white;
     cursor:pointer;
@@ -302,7 +303,6 @@ div.label {
     gap:20px;
     position:fixed;
     transition: 1s;
-    
     right:-100%;
     top:0;
     z-index:100;
@@ -318,11 +318,6 @@ div.label {
     color:gray;
     font-size:25px;
     border:none;
-}
-
-.close-cart-button:hover {
-    cursor:pointer;
-    color:lightgray;
 }
 
 .cart-remove-button {
@@ -345,8 +340,16 @@ div.label {
 .gray-cover {
     background:gray;
     opacity:0.5;
-    position:absolute;
+    position:fixed;
     height:100%;
     width:100%;
     z-index:99;
+}
+
+.checkout-buttons {
+    background: white;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    font-size:15px;
+    padding:10px;
 }

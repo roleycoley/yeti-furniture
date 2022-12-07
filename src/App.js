@@ -7,7 +7,7 @@ import Navbar from './components/Navbar'
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 
 
-//https://www.freepik.com/free-photos-vectors/interior-background
+//images from : https://www.freepik.com/free-photos-vectors/interior-background
         
 // dropdown menu
 document.addEventListener("click", e => {

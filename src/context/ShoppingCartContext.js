@@ -63,6 +63,11 @@ export function ShoppingCartProvider({children})
         })
       }
 
+      function removeAllFromCart()
+      {
+          cartItems.forEach(item => removeFromCart(item.id))
+      }
+
     return (
         <ShoppingCartContext.Provider
         value={{
@@ -74,6 +79,7 @@ export function ShoppingCartProvider({children})
           closeCart,
           cartItems,
           cartQuantity,
+          removeAllFromCart
         }}
         >
             <ShoppingCart isOpen={isOpen} />
