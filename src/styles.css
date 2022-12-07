@@ -14,17 +14,24 @@ body {
 }
 
 .fimage-container {
+    display:flex;
+    flex-direction:column;
+    margin:auto;
+    width: 1125px;
+    height: 675px;
+    justify-content:center;
+    align-items:center;
     text-align:center;
     color:white;
     position:relative;
 }
 
 .fpage-image {
-    width: 1125px;
-    height:auto;
+    width: 100%;
+    height: 100%;
     z-index:-1000;
     box-shadow: 0 2px 5px 0 rgb(0,0,0, 0.2);
-    
+    position:absolute;
 }
 
 .sections {
@@ -55,10 +62,7 @@ body {
 }
 
 .button {
-    position: absolute;
     padding: 10px;
-    inset:0;
-    margin:330px auto;
     width:120px;
     height:20px;
     border: 1px solid white;
@@ -67,6 +71,7 @@ body {
     color:white;
     transition:0.3s;
     cursor: pointer;
+    transform:translateY(-55%);
 }
 
 .button:hover{
@@ -74,24 +79,23 @@ body {
 }
 
 .letter-container {
+    height:auto;
     color:white;
-    position:absolute;
-    inset:0;
-    margin:200px auto;
     text-transform: uppercase;
     font-size:50px;
     cursor:default;
+    display:flex;
+    transform:translateY(-105%);
+    gap:5px;
 }
 
 .letter-container div {
-    display:inline-block;
     transition: 0.2s;
     padding:5px;
 }
 
 .letter-container div.active {
     transform:translateY(-25%);
-
 }
 
 .title {
