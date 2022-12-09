@@ -1,89 +1,86 @@
-import React, { createContext, useContext, useState } from "react"
-import ShoppingCart from "../components/ShoppingCart"
+import React, { createContext, useContext, useState } from "react";
+import ShoppingCart from "../components/ShoppingCart";
 
-const ShoppingCartContext = createContext({})
+const ShoppingCartContext = createContext({});
 
 export function useShoppingCart() {
-    return useContext(ShoppingCartContext)
+  return useContext(ShoppingCartContext);
 }
 
-export function ShoppingCartProvider({children})
-{
+export function ShoppingCartProvider({ children }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
 
-    const [isOpen, setIsOpen] = useState(false)
-    const [cartItems, setCartItems] = useState([])
+  const openCart = () => setIsOpen(true);
+  const closeCart = () => setIsOpen(false);
 
-    const openCart = () => setIsOpen(true)
-    const closeCart = () => setIsOpen(false)
+  const cartQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  );
 
-    const cartQuantity = cartItems.reduce(
-      (quantity, item) => item.quantity + quantity,
-      0
-    )
+  function getItemQuantity(id) {
+    return cartItems.find((item) => item.id === id)?.quantity || 0;
+  }
 
-    function getItemQuantity(id) {
-        return cartItems.find(item => item.id === id)?.quantity || 0
-      }
-
-      function increaseCartQuantity(id) {
-        setCartItems(currItems => {
-          if (currItems.find(item => item.id === id) == null) {
-            return [...currItems, { id, quantity: 1 }]
+  function increaseCartQuantity(id) {
+    setCartItems((currItems) => {
+      if (currItems.find((item) => item.id === id) == null) {
+        return [...currItems, { id, quantity: 1 }];
+      } else {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + 1 };
           } else {
-            return currItems.map(item => {
-              if (item.id === id) {
-                return { ...item, quantity: item.quantity + 1 }
-              } else {
-                return item
-              }
-            })
+            return item;
           }
-        })
+        });
       }
+    });
+  }
 
-      function decreaseCartQuantity(id) {
-        setCartItems(currItems => {
-          if (currItems.find(item => item.id === id)?.quantity === 1) {
-            return currItems.filter(item => item.id !== id)
+  function decreaseCartQuantity(id) {
+    setCartItems((currItems) => {
+      if (currItems.find((item) => item.id === id)?.quantity === 1) {
+        return currItems.filter((item) => item.id !== id);
+      } else {
+        return currItems.map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity - 1 };
           } else {
-            return currItems.map(item => {
-              if (item.id === id) {
-                return { ...item, quantity: item.quantity - 1 }
-              } else {
-                return item
-              }
-            })
+            return item;
           }
-        })
+        });
       }
+    });
+  }
 
-      function removeFromCart(id) {
-        setCartItems(currItems => {
-          return currItems.filter(item => item.id !== id)
-        })
-      }
+  function removeFromCart(id) {
+    setCartItems((currItems) => {
+      return currItems.filter((item) => item.id !== id);
+    });
+  }
 
-      function removeAllFromCart()
-      {
-          cartItems.forEach(item => removeFromCart(item.id))
-      }
+  function removeAllFromCart() {
+    cartItems.forEach((item) => removeFromCart(item.id));
+  }
 
-    return (
-        <ShoppingCartContext.Provider
-        value={{
-          getItemQuantity,
-          increaseCartQuantity,
-          decreaseCartQuantity,
-          removeFromCart,
-          openCart,
-          closeCart,
-          cartItems,
-          cartQuantity,
-          removeAllFromCart
-        }}
-        >
-            <ShoppingCart isOpen={isOpen} />
-            {children}
-        </ShoppingCartContext.Provider>
-    )
+  return (
+    <ShoppingCartContext.Provider
+      value={{
+        getItemQuantity,
+        increaseCartQuantity,
+        decreaseCartQuantity,
+        removeFromCart,
+        openCart,
+        closeCart,
+        cartItems,
+        cartQuantity,
+        removeAllFromCart,
+      }}
+    >
+      <ShoppingCart isOpen={isOpen} />
+      {children}
+    </ShoppingCartContext.Provider>
+  );
 }

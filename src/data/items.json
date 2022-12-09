@@ -1,26 +1,26 @@
 [
-    {
-      "id": 1,
-      "name": "Gray Bed",
-      "price": 299.99000,
-      "imgUrl": "images/bed-cart.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Suede Chair",
-      "price": 49.99,
-      "imgUrl": "images/chair-cart.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Navy Couch",
-      "price": 199.99,
-      "imgUrl": "images/couch-cart.jpg"
-    },
-    {
-      "id": 4,
-      "name": "Black Lamp",
-      "price": 35,
-      "imgUrl": "images/lamp-cart.jpg"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Gray Bed",
+    "price": 299.99,
+    "imgUrl": "images/bed-cart.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Suede Chair",
+    "price": 49.99,
+    "imgUrl": "images/chair-cart.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Navy Couch",
+    "price": 199.99,
+    "imgUrl": "images/couch-cart.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Black Lamp",
+    "price": 35,
+    "imgUrl": "images/lamp-cart.jpg"
+  }
+]
