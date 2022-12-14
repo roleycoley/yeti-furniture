@@ -4,9 +4,11 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Store from "./pages/Store";
 import Navbar from "./components/Navbar";
+import NavbarMobile from "./components/NavbarMobile";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 
-//images from : https://www.freepik.com/free-photos-vectors/interior-background
+// images from : https://www.freepik.com/free-photos-vectors/interior-background
+// https://icons8.com/icons/set/hamburger--white
 
 // dropdown menu
 document.addEventListener("click", (e) => {
@@ -31,6 +33,7 @@ document.addEventListener("click", (e) => {
 function App() {
   return (
     <ShoppingCartProvider>
+      <NavbarMobile />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

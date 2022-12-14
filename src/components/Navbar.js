@@ -8,7 +8,7 @@ export default function Navbar() {
   const dropdownRef = useRef();
 
   return (
-    <>
+    <div class="navbar">
       <p className="header">Deals up to 50% off!</p>
       <div className="sections">
         <Link to="/">
@@ -87,6 +87,6 @@ export default function Navbar() {
           )}
         </div>
       </div>
-    </>
+    </div>
   );
 }

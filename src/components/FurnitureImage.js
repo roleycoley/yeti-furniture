@@ -23,6 +23,8 @@ export default function FurnitureImage({ imgUrl, text }) {
       <Link to="/store">
         <img src={imgUrl} alt="couch" className={state ? "active" : null} />
       </Link>
+      
+      
     </div>
   );
 }

@@ -20,9 +20,10 @@ export default function InteractiveLetter({ character, placement }) {
 
   return (
     <div
-      className={state ? "active" : null}
+      className={state ? "character active" : "character"}
       onMouseLeave={deactivate}
       onMouseEnter={toggleActive}
+      style={{display:'inline-block'}}
     >
       {character}
     </div>
