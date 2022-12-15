@@ -12,15 +12,6 @@ export default function Navbar() {
 
   return (
     <>
-      <div  className="navbar-mobile">
-        <div className="hamburger" onClick={() => toggleMenu(true)}>
-          <MenuIcon />
-        </div>
-        <div>
-          <img  style={{height:'32px', display:'block'}}src="favicon.ico" alt="yeti-snowflake" />
-        </div>
-      </div>
-
       <div className={isOpen ? "mobile-menu active" : "mobile-menu"}>
         <div
           style={{
@@ -61,6 +52,29 @@ export default function Navbar() {
             <div>{">"}</div>
           </div>
         </Link>
+      </div>
+
+      <div className="navbar-mobile">
+      <Link to="/">
+        <div>
+          <img
+            style={{ height: "32px", display: "block", cursor:"pointer" }}
+            src="favicon.ico"
+            alt="yeti-snowflake"
+          />
+        </div>
+        </Link>
+        <div className="mobile-icon-container">
+          <div className="cart-icon" onClick={openCart}>
+            <ShoppingCartIcon />
+            {cartQuantity > 0 && (
+              <div className="cart-items-amount">{cartQuantity}</div>
+            )}
+          </div>
+          <div className="hamburger" onClick={() => toggleMenu(true)}>
+            <MenuIcon />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -80,11 +80,13 @@ export default function Navbar() {
         <Link to="/contact">
           <button>Locations</button>
         </Link>
-        <div className="cart-icon" onClick={openCart}>
-          <ShoppingCartIcon />
-          {cartQuantity > 0 && (
-            <div className="cart-items-amount">{cartQuantity}</div>
-          )}
+        <div style={{position:'absolute', right:'10px'}}>
+          <div className="cart-icon" onClick={openCart}>
+            <ShoppingCartIcon />
+            {cartQuantity > 0 && (
+              <div className="cart-items-amount">{cartQuantity}</div>
+            )}
+          </div>
         </div>
       </div>
     </div>

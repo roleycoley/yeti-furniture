@@ -1,3 +1,4 @@
+import { withTheme } from "@material-ui/core";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 
@@ -15,6 +16,9 @@ export default function CartItem({ id, imgUrl, name, price }) {
       <div style={{ height: "252px", overflow: "hidden", textAlign: "center" }}>
         <img src={imgUrl} alt={name} />
       </div>
+      <div>
+        
+      </div>
       <div className="item-info">
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <div className="label">{name}</div>
@@ -23,19 +27,24 @@ export default function CartItem({ id, imgUrl, name, price }) {
           </div>
         </div>
         {quantity === 0 ? (
-          <button
-            className="yeti-style"
-            style={{ height: "40px", width: "90%", fontSize: "12px" }}
-            onClick={() => increaseCartQuantity(id)}
-          >
-            + Add To Cart
-          </button>
+
+            <button
+              className="yeti-style"
+              style={{
+                height: "40px",
+                width: "90%",
+                fontSize: "12px",
+              }}
+              onClick={() => increaseCartQuantity(id)}
+            >
+              + Add To Cart
+            </button>
+
         ) : (
           <div
             style={{
               display: "flex",
               justifyContent: "center",
-              marginTop: "10px",
             }}
           >
             <div className="items-in-cart-buttons">

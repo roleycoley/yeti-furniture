@@ -1,6 +1,6 @@
-/* * {
+* {
   box-sizing: border-box;
-}*/
+}
 
 
 body {
@@ -14,9 +14,10 @@ body {
   display: none;
   height: 50px;
   background: white;
+  position:relative;
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.1);
 }
-
+ 
 .header {
   background: black;
   padding: 2px;
@@ -38,7 +39,6 @@ body {
   letter-spacing: 1px;
   border: 0;
   font-size: 18px;
-  box-sizing: border-box;
   margin-bottom: 1px;
   background: white;
   margin: 16px;
@@ -103,8 +103,8 @@ body {
 
 .button {
   padding: 10px;
-  width: 120px;
-  height: 20px;
+  width: 140px;
+  height: fit-content;
   border: 1px solid white;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -192,6 +192,7 @@ a:hover {
   justify-content: center;
   gap: 40px;
   padding: 60px;
+  
 }
 
 div.grid-item {
@@ -236,7 +237,7 @@ div.furniture-item-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, 380px);
   grid-gap: 50px;
-  padding: 50px 100px;
+  padding: 50px 20px;
   justify-content: center;
 }
 
@@ -248,6 +249,7 @@ div.furniture-item {
   box-shadow: 0 2px 5px 0 rgb(0, 0, 0, 0.1);
   flex-basis: 0;
   flex-grow: 1;
+  
 }
 
 div.item-info {
@@ -257,6 +259,9 @@ div.item-info {
   background: white;
   padding: 10px;
   justify-content: center;
+  gap:10px;
+  box-sizing: content-box;
+
 }
 
 div.label {
@@ -291,8 +296,6 @@ div.label {
 }
 
 .cart-icon {
-  position: absolute;
-  right: 20px;
   width: 40px;
   height: 40px;
   display: flex;
@@ -301,6 +304,7 @@ div.label {
   border: lightgray solid 2px;
   border-radius: 50px;
   transition: 0.2s;
+  position:relative;
 }
 
 .cart-icon:hover {
@@ -325,18 +329,28 @@ div.label {
   color: white;
 }
 
-.hamburger {
-  position: absolute;
-  right: 1vw;
-  width: 40px;
-  height: 40px;
+.mobile-icon-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-inline-start: auto;
+  gap:5px;
+}
+
+.hamburger {
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
 }
 
 .hamburger:hover {
   cursor:pointer;
+  background:#f3f3f3;
+  
 }
 
 .shopping-cart, .mobile-menu {
@@ -351,12 +365,12 @@ div.label {
   position: fixed;
   transition: 1s;
   right: -150%;
-  top: 0;
   z-index: 100;
 }
 
 .mobile-menu {
   gap: 30px;
+  padding:30px;
 }
 
 .mobile-section {
@@ -468,18 +482,31 @@ div.label {
   }
 
   .shopping-cart {
-    width:90vw;
+    width:100vw;
   }
 
   .mobile-menu {
     width:100vw;
   }
 
-  .button {
-    width: 120px;
-    height: 20px;
+  .cart-icon {
+    border: none;
+    transition:0s;
   }
 
+  .cart-icon:hover {
+    background: #f3f3f3;
+    border:none;
+  }
 
+  div.furniture-item-container {
+    grid-template-columns: repeat(auto-fill, 300px);
+  }
+
+  .cart-items-amount {
+    right:0px;
+    bottom:0px;
+  }
+  
 
 }
