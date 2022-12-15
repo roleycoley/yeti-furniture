@@ -10,6 +10,10 @@ body {
   font-family: Arial;
 }
 
+button {
+  color:black;
+}
+
 .navbar-mobile {
   display: none;
   height: 50px;
