@@ -1,4 +1,5 @@
 🛒 E-Commerce Website Project
+
 For this project, I set out to implement key features commonly found in modern e-commerce websites—such as a dropdown menu and a shopping cart system. At the time, I had just begun exploring React.js, but by the end, I had gained a solid understanding of React components and essential React hooks, particularly useState for managing interactivity and adding smooth animations on page load.
 
 This project also gave me valuable practice with CSS Grid and Flexbox, both of which I used to craft a responsive and visually pleasing layout. My goal was to create a user-friendly experience that felt clean and intuitive.
